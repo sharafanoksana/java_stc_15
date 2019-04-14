@@ -9,4 +9,5 @@ public class TimeCalc {
     public static long secondsToHours (long seconds){
         return seconds/3600;
     }
+
 }
