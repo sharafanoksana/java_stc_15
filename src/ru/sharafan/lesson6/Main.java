@@ -1,23 +1,43 @@
 package ru.sharafan.lesson6;
 
+import ru.sharafan.lesson6.documents.Act;
+import ru.sharafan.lesson6.documents.Contract;
+import ru.sharafan.lesson6.documents.Converter;
+
 public class Main {
-    static int count = 0;
+
+
     public static void main(String[] args)
     {
-
-        int i = 0;
-        count = count + i;
-        Calculator myCalc = new Calculator();
-
-        i = count;
-        for (i = 0;;i++)
-        {
-            myCalc.getNum1();
-            myCalc.getOperationMark();
-            myCalc.getNum2();
-            System.out.println("= " + myCalc.giveResalt());
+        /**
+         * Задача 1. Калькулятор
+         */
+        //       Calculator.startCalculator();
 
 
-        }
+        /**
+         * Задача 2. Счетчик создаваемыъ объетков конструктора класса CountOfMyObjects
+         */
+        //        CountOfMyObjects.makeAnObjects();
+        //        System.out.printf("Вы создали %d объектов класса CountOfMyObjects\n", CountOfMyObjects.getCount());
+
+
+        /**
+         * Задача 3. Конвертирование Договора в АКТ
+         */
+        Contract myFirstContract = new Contract("Максим", "Оксана");
+        myFirstContract.addProduct("Работа 1");
+        myFirstContract.addProduct("Работа 2");
+        myFirstContract.addProduct("Работа 3");
+        myFirstContract.printContract();
+
+        System.out.println("__________________________________________");
+
+        Converter processor = new Converter(myFirstContract);
+        Act result = processor.doConvert();
+        result.printAct();
+
+
     }
+
 }
