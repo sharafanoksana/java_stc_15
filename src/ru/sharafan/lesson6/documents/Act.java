@@ -23,12 +23,6 @@ public class Act {
         this.completeWorkList = new ArrayList<String>();
         this.date = new Date();
         this.number = counter++;
-
-    }
-
-    public void setCompleteWorkList(ArrayList<String> list)
-    {
-        this.completeWorkList = list;
     }
 
     public void setCustomer(String customer)
@@ -39,6 +33,11 @@ public class Act {
     public void setExecutor(String executor)
     {
         this.executor = executor;
+    }
+
+    public void setCompleteWorkList(ArrayList<String> list)
+    {
+        this.completeWorkList = list;
     }
 
     public void printAct()

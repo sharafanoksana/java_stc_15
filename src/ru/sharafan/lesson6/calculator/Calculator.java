@@ -49,8 +49,13 @@ public class Calculator {
 
     public static void startCalculator()
     {
+        System.out.println("Введите число");
         double num1 = getNum1();
+
+        System.out.println("Введите символ операции");
         char mark = getOperationMark();
+
+        System.out.println("Введите число");
         double num2 = getNum2();
 
         System.out.println("= " + Calculator.giveResult(num1, num2, mark));

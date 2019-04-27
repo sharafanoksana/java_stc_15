@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Contract {
-    private static int counter = 1;
+    private static int counter = 1; //счетчик созданных объектов
     private int number;
     private String customer;
     private String executor;
@@ -28,6 +28,10 @@ public class Contract {
         return productList;
     }
 
+    /**
+     * Формирование списка работ
+     * @param product - предмет договора (услуга, работа)
+     */
     public void addProduct(String product)
     {
         this.productList.add(product);

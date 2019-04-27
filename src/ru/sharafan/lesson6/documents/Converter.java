@@ -1,20 +1,19 @@
 package ru.sharafan.lesson6.documents;
 
 public class Converter {
-    private Contract source;
+    private static Contract source;
 
     public Converter(Contract currentContract)
     {
-        this.source = currentContract;
+        source = currentContract;
     }
 
-    public Act doConvert()
+    public static Act doConvert()
     {
         Act destinationAct = new Act();
-        destinationAct.setCompleteWorkList(this.source.getProductList());
-        destinationAct.setCustomer(this.source.getCustomer());
-        destinationAct.setExecutor(this.source.getExecutor());
+        destinationAct.setCompleteWorkList(source.getProductList());
+        destinationAct.setCustomer(source.getCustomer());
+        destinationAct.setExecutor(source.getExecutor());
         return destinationAct;
-
     }
 }
