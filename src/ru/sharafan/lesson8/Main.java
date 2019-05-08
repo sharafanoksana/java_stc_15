@@ -6,8 +6,10 @@ public class Main {
     public static void main(String[] arg)
     {
         System.out.println("Введите строку");
+
         Scanner scanner = new Scanner(System.in);
         String s = scanner.next();
+
         String myString = s.replaceAll("бяка", "вырезано цензурой");
         System.out.println(myString);
 
