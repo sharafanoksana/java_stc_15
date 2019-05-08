@@ -28,5 +28,4 @@ public class CountOfMyObjects {
             new CountOfMyObjects();
         }
     }
-
 }
