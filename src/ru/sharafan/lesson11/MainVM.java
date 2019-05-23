@@ -5,7 +5,7 @@ import org.apache.log4j.Priority;
 import ru.sharafan.lesson11.vendingMachine2.VendingMachine;
 
 public class MainVM {
-    private static final Logger logger = Logger.getLogger(MainVM.class);
+    public static Logger logger = Logger.getLogger(MainVM.class);
 
     public static void main(String[] args) throws IndexOutOfBoundsException
     {
