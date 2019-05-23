@@ -1,6 +1,6 @@
-package ru.sharafan.lesson5.vendingMachine;
-
-import ru.sharafan.lesson5.vendingMachine.drink.*;
+package ru.sharafan.lesson11.vendingMachine2;
+import org.apache.log4j.Logger;
+import ru.sharafan.lesson11.vendingMachine2.drink.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -55,9 +55,9 @@ public class VendingMachine {
     /**
      * Проверка на правильнось ввода индекса напитка из меню
      *
-     * @param
+     * @param logger
      */
-    public void choiceDrink()
+    public void choiceDrink(Logger logger) throws IndexOutOfBoundsException
     {
         do
         {
@@ -66,8 +66,11 @@ public class VendingMachine {
             this.button = scanner.nextInt() - 1;
             if (this.button < 0 || this.button > this.arrayOfDrinks.size() - 1)
             {
-                System.out.println("У нас нет такого напитка.");
-                scanner = null;
+                //System.out.println("У нас нет такого напитка.");
+                logger.info("Вызван метод choiceDrink с параметром <" + this.button + ">");
+                logger.warn("Внимание! сейчас будет ошибка");
+                throw new IndexOutOfBoundsException("У нас нет такого напитка.");
+                //scanner = null;
             }
             else
             {
