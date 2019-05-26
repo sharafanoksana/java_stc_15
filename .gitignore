@@ -2,3 +2,6 @@
 /.idea/
 /out/
 /files/
+/log4j.txt/
+/.log4j/
+/.resources/
