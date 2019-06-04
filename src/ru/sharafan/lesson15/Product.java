@@ -47,17 +47,4 @@ public class Product implements Serializable {
             this.price = Double.parseDouble(price);
         }
     }
-
-//    private double doCount()
-//    {
-//        this.count = this.price * this.weight;
-//        return this.count;
-//    }
-
-//    @Override
-//    public String toString()
-//    {
-//        String s = String.format("%.15s %2$24.2d x%1$7.3d = %3$13.2d%n", this.name, this.price, this.weight, this.count);
-//        return s;
-//    }
 }

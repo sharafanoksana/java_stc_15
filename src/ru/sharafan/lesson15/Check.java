@@ -96,6 +96,7 @@ public class Check implements Serializable {
             Formatter f3 = new Formatter();
             Formatter footer = f3.format("%-15.15s%32s%n", "Итого:", strTotal);
             writer.write(String.valueOf(footer));
+            f1.close();
             f3.close();
 
         } catch (IOException e)
